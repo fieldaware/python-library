@@ -183,7 +183,7 @@ class Airship(object):
             payload['aliases'] = aliases
         if tags:
             payload['tags'] = tags
-        if scheduled_for:
+        if schedule_for:
             payload['schedule_for'] = schedule_for
         body = json.dumps(payload)
         status, response = self._request('POST', body, PUSH_URL,
